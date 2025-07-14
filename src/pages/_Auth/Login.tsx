@@ -1,8 +1,7 @@
+import AuthForm from "./AuthForm";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  return <AuthForm type="login" />;
+};
 
-export default Login
+export default Login;

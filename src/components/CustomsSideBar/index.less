@@ -1,0 +1,36 @@
+.sidebar-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px 0 0 0;
+  transition: all .3s;
+  // &.--collapsed {
+  //   width: 60px;
+  // }
+  .sidebar-menu {
+    .sidebar-menu-item {
+      min-height: 36px;
+      padding: 4px 0 4px 16px;
+      transition: all .3s;
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--tab-hover-bg);
+      }
+      &.--active {
+        background-color: var(--tab-on-bg);
+        color: var(--tab-on-text);
+      }
+    }
+  }
+  .btn-collapse {
+    margin-top: auto;
+    margin-bottom: 16px;
+    width: 100%;
+    border : none;
+    &:hover {
+      background-color: var(--tab-hover-bg) !important;
+    }
+  }
+}

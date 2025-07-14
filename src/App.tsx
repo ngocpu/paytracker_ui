@@ -11,7 +11,7 @@ import ProtectedLayout from "./layout/ProtectedLayout";
 import ROUTER from "./constants/router";
 
 function App() {
-  const theme = "light"; // or 'dark', depending on your theme preference
+  const theme = "light";
   const themeANTD = {
     lightTheme: {
       token: {
@@ -21,9 +21,13 @@ function App() {
       components: {
         Button: {
           colorPrimaryHover: "var(--button-on-bg)",
-          defaultHoverBg: "var(--button-off-bg)",
+          // defaultHoverBg: "var(--button-off-bg)",
           colorPrimaryActive: "var(--button-on-bg)",
         },
+        Input: {
+          activeBorderColor: 'var(--button-on-bg)',
+          hoverBorderColor: 'var(--button-on-bg)',
+        }
       },
     },
     darkTheme: {
@@ -34,8 +38,8 @@ function App() {
         components: {
           Button: {
             colorPrimaryHover: "var(--button-on-bg)",
-            defaultHoverBg: "var(--button-off-bg)",
-            colorPrimaryActive: "var(--button-on-bg)",
+            // defaultHoverBg: "var(--button-off-bg)",
+            // colorPrimaryActive: "var(--button-on-bg)",
           },
         },
       },
@@ -50,7 +54,7 @@ function App() {
           <SimpleBar className="full-max-height full-max-width">
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
-                <Route path="/auth" element={<PublicLayout />}>
+                <Route path="/" element={<PublicLayout />}>
                   <Route path={ROUTER_PATH.LOGIN} element={<Login />} />
                   <Route path={ROUTER_PATH.REGISTER} element={<Register />} />
                 </Route>
