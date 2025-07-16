@@ -10,8 +10,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const handleClick = ({ value, path }: { value: string; path: string }) => {
     setActiveTab(value);
-    console.log(`Navigating to ${path}`);
-    navigate(value === "Dashboard" ? `/dashboard` : `/dashboard/${path}`);
+    navigate(path);
   };
   console.log(`Sidebar isCollapsed: ${isCollapsed}`);
   return (

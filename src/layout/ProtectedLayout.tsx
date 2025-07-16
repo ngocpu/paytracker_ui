@@ -12,7 +12,7 @@ const ProtectedLayout = () => {
       </div>
       <div className="protected-container --right">
         <Header />
-        <div className="protected-content">
+        <div className="protected-content bg-tertiary-2">
           <Outlet />
         </div>
       </div>

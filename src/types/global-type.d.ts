@@ -7,3 +7,8 @@ type RouterExtraProps = {
   listChildren?: CustomRouterProps[];
 };
 export type CustomRouterProps = RouteProps & RouterExtraProps;
+
+export type CustomTabCardProps = {
+  activeTabKey?: string;
+  setActiveTabKey: (key: string) => void;
+}

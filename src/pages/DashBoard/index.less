@@ -1,0 +1,22 @@
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+
+  &.--left {
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+  &.--right {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dashboard-body {
+    flex-direction: row;
+    min-height: 550px;
+    &.--right {
+      width: 25%;
+    }
+  }
+}

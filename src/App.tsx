@@ -1,14 +1,14 @@
 import { ConfigProvider, Flex, theme as ThemAntd } from "antd";
-import "./App.less";
-import SimpleBar from "simplebar-react";
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import SimpleBar from "simplebar-react";
+import "./App.less";
+import ROUTER from "./constants/router";
+import ROUTER_PATH from "./constants/router-path";
+import ProtectedLayout from "./layout/ProtectedLayout";
 import PublicLayout from "./layout/PublicLayout";
 import Login from "./pages/_Auth/Login";
 import Register from "./pages/_Auth/Register";
-import ROUTER_PATH from "./constants/router-path";
-import ProtectedLayout from "./layout/ProtectedLayout";
-import ROUTER from "./constants/router";
 
 function App() {
   const theme = "light";
@@ -17,6 +17,7 @@ function App() {
       token: {
         colorBgContainer: "var(--background-primary)",
         fontFamily: "Tiktok Sans, sans-serif",
+        colorPrimary: "var(--button-on-bg)",
       },
       components: {
         Button: {
@@ -27,6 +28,10 @@ function App() {
         Input: {
           activeBorderColor: 'var(--button-on-bg)',
           hoverBorderColor: 'var(--button-on-bg)',
+        },
+        DatePicker: {
+          hoverBorderColor: 'var(--button-on-bg)',
+          activeBorderColor: 'var(--button-on-bg)',
         }
       },
     },

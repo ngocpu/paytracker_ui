@@ -1,0 +1,32 @@
+.custom-tab-card {
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--tab-on-bg) !important;
+  }
+  
+  .ant-tabs-tab:hover .ant-tabs-tab-btn {
+    color: var(--tab-on-bg) !important;
+  }
+
+  // Active line/border color
+  .ant-tabs-ink-bar {
+    background-color: var(--tab-on-bg) !important;
+  }
+
+  // Alternative: if using different tab type
+  .ant-tabs-tab.ant-tabs-tab-active::before {
+    border-bottom-color: var(--tab-on-bg) !important;
+  }
+
+  // Tab border if any
+  .ant-tabs-tab.ant-tabs-tab-active {
+    border-color: var(--tab-on-bg) !important;
+  }
+}
+.card-body{
+    .amount-info {
+        width: 60px;
+        height: 20px;
+        padding: 4px 12px;
+        border-radius: 4px;
+    }
+}

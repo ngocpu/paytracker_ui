@@ -2,7 +2,7 @@ import React from 'react'
 
 const Saving = () => {
   return (
-    <div>Saving</div>
+    <div className=''>Saving</div>
   )
 }
 
